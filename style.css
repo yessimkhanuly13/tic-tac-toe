@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    border: 1px solid;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 4vw;
+    width: 30vw;
+    border: none;
+}
+
+.start{
+    width: 10vw;
+}
