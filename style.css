@@ -3,9 +3,6 @@
     padding: 0;
 }
 
-div{
-    border: 1px solid;
-}
 
 .container{
     display: flex;
@@ -20,16 +17,32 @@ div{
     display: grid;
     grid-template-columns: repeat(3, 10vw);
     grid-template-rows: repeat(3, 10vw);
+    
 }
+
+.cells{
+    border: 1px solid;
+    display: flex;
+    font-size: 6vw;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .header{
     display: flex;
     justify-content: space-between;
     margin: 4vw;
-    width: 30vw;
-    border: none;
+    width: 50vw;
 }
 
 .start{
     width: 10vw;
+}
+
+.cross{
+    width: 10vw;
+    height: 10vh;
+    display: flex;
+    background-color: aquamarine;
 }
