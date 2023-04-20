@@ -46,3 +46,8 @@
     display: flex;
     background-color: aquamarine;
 }
+
+.reset{
+    display: none;
+    width: 10vw;
+}
