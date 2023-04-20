@@ -4,6 +4,9 @@ const turn = document.querySelector('.turn');
 const gamsf = document.querySelector('.game');
 const restart = document.querySelector('.reset');
 
+document.querySelector('#pl-name').value = 'Bishop';
+document.querySelector('#pl-name2').value = 'Huddlestone';
+
 const winCombinations = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
 ]
@@ -75,12 +78,12 @@ const game = (()=>{
             gameBoard.update(index, player1.mark);
             player1.turn = false;
             player2.turn = true;
-            turn.textContent = `${player1.name}'s turn!`
+            turn.textContent = `${player2.name}'s turn!`
         }else if(player2.turn === true){
             gameBoard.update(index, player2.mark);
             player2.turn = false;
             player1.turn = true;
-            turn.textContent = `${player2.name}'s turn!`
+            turn.textContent = `${player1.name}'s turn!`
         }
 
         if( draw() === true){
@@ -91,10 +94,10 @@ const game = (()=>{
         if(winner() === true){
             switch(player1.turn){
                 case true:
-                    turn.textContent = `${player1.name}'s victory!`
+                    turn.textContent = `${player2.name}'s victory!`
                     break;
                 case false:
-                    turn.textContent = `${player2.name}'s victory!`
+                    turn.textContent = `${player1.name}'s victory!`
                     break;
             }
             isGameOver = true;
